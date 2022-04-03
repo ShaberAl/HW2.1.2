@@ -52,6 +52,9 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="changeColourButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kXe-nO-dMb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -64,6 +67,12 @@
                             <constraint firstItem="DIy-fb-8ns" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="fmG-MV-OwW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenLightView" destination="NiD-ZA-giC" id="qHU-l6-baj"/>
+                        <outlet property="redLightView" destination="AWW-An-T9q" id="VEC-Rb-1RA"/>
+                        <outlet property="startButton" destination="meI-rW-fPM" id="lfe-wA-hp9"/>
+                        <outlet property="yellowLightView" destination="Rtt-6e-IIr" id="v6J-dU-HK5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
