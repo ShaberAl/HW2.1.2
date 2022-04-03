@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         startButton.layer.cornerRadius = 20
     }
     
-    @IBAction func changeColourButton(_ sender: UIButton) { {
+    @IBAction func changeColourButton(_ sender: UIButton) {
         if startButton.currentTitle == "START" {
             startButton.setTitle("NEXT", for: .normal)
         }
