@@ -4,11 +4,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var redLightView: UIView!
     @IBOutlet weak var yellowLightView: UIView!
     @IBOutlet weak var greenLightView: UIView!
+    
     @IBOutlet weak var startButton: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    override func viewDidLayoutSubviews() {
         redLightView.layer.cornerRadius = redLightView.frame.size.height / 2
         yellowLightView.layer.cornerRadius = yellowLightView.frame.size.height / 2
         greenLightView.layer.cornerRadius = greenLightView.frame.size.height / 2
@@ -16,7 +15,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func changeColourButton(_ sender: UIButton) {
-        startButton.setTitle("NEXT", for: .normal)
+        if startButton.currentTitle == "START" {
+            startButton.setTitle("NEXT", for: .normal)
+        }
         
         if redLightView.alpha != 1.0 && yellowLightView.alpha != 1.0 {
             redLightView.alpha = 1.0
