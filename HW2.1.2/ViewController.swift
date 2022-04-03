@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  HW2.1.2
-//
-//  Created by MacOS on 03.04.2022.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -23,7 +16,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func changeColourButton(_ sender: UIButton) {
+        startButton.setTitle("NEXT", for: .normal)
         
+        if redLightView.alpha != 1.0 && yellowLightView.alpha != 1.0 {
+            redLightView.alpha = 1.0
+            greenLightView.alpha = 0.3
+        } else if redLightView.alpha == 1.0 {
+            redLightView.alpha = 0.3
+            yellowLightView.alpha = 1.0
+        } else {
+            yellowLightView.alpha = 0.3
+            greenLightView.alpha = 1.0
+        }
     }
 }
 
